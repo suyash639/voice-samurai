@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Samurai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Voice Samurai</h1>
+        <p class="subtitle">Control with your voice</p>
+    </div>
+
+    <div class="status-indicator" id="statusIndicator">
+        <span class="status-dot idle"></span>
+        <span class="status-text" id="statusText">Ready</span>
+    </div>
+
+    <div class="controls">
+        <button id="recordBtn" class="btn btn-primary">
+            <span class="btn-icon">🎤</span>
+            Start Recording
+        </button>
+        <button id="stopBtn" class="btn btn-secondary" disabled style="display: none;">
+            <span class="btn-icon">⏹</span>
+            Stop Recording
+        </button>
+    </div>
+
+    <div class="info-section" id="infoSection" style="display: none;">
+        <div class="info-box">
+            <h3 id="transcriptTitle">Transcript</h3>
+            <p id="transcriptText"></p>
+        </div>
+
+        <div class="info-box">
+            <h3>AI Thought</h3>
+            <p id="thoughtText"></p>
+        </div>
+
+        <div class="info-box">
+            <h3>Actions to Execute</h3>
+            <p id="actionsText"></p>
+        </div>
+
+        <button id="resetBtn" class="btn btn-outline">Reset</button>
+    </div>
+
+    <div class="error-section" id="errorSection" style="display: none;">
+        <div class="error-box">
+            <h3>Error</h3>
+            <p id="errorText"></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Alt+V to toggle recording</p>
+    </div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
